@@ -1,0 +1,832 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NeuralNet.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NETDLG DIALOGEX 0, 0, 354, 230
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Rodzaj sieci:",IDC_STATIC,0,0,66,28,WS_DISABLED
+    CONTROL         "Perceptron",IDC_NET_PERCEPTRON,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,6,12,51,10
+    GROUPBOX        "Algorytm uczenia:",IDC_STATIC,72,0,132,28,WS_DISABLED
+    CONTROL         "Wsteczna propagacja b³êdu",IDC_NET_EBP,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,78,12,105,10
+    GROUPBOX        "Algorytm obliczania b³êdu:",IDC_STATIC,210,0,144,28,
+                    WS_DISABLED
+    CONTROL         "Suma kwadratów",IDC_NET_QUADRA,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,216,12,71,10
+    GROUPBOX        "Ustawienia sieci:",IDC_STATIC,0,30,354,89
+    LTEXT           "Szybkoœæ uczenia (eta):",IDC_STATIC,12,42,78,12,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_ETA,90,42,96,14,ES_AUTOHSCROLL
+    LTEXT           "Bezw³adnoœæ (alfa):",IDC_STATIC,12,60,78,12,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_ALFA,90,60,96,14,ES_AUTOHSCROLL
+    LTEXT           "Wzmocnienie (beta):",IDC_STATIC,12,78,78,12,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_BETA,90,78,96,14,ES_AUTOHSCROLL
+    LTEXT           "Funkcja aktywacji:",IDC_STATIC,12,96,78,12,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    COMBOBOX        IDC_NET_FUNCTION,90,97,96,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Liczba wejœæ:",IDC_STATIC,198,42,54,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_INPUTS,258,42,78,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_NET_INPUTS_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    336,42,11,14
+    LTEXT           "Liczba wyjœæ:",IDC_STATIC,198,60,54,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_OUTPUTS,258,60,78,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_NET_OUTPUTS_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    336,60,11,14
+    LTEXT           "Szerokoœæ:",IDC_STATIC,198,78,54,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_WIDTH,258,78,78,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NET_WIDTH_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    336,78,11,14
+    LTEXT           "Wysokoœæ:",IDC_STATIC,198,96,54,12,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NET_HEIGHT,258,96,78,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NET_HEIGHT_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    336,96,11,14
+    GROUPBOX        "Warstwy wewnêtrzne:",IDC_STATIC,0,120,222,91
+    LTEXT           "Liczba neuronów w warstwie:",IDC_STATIC,9,132,95,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_NET_NEURONS,106,132,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_NET_NEURONS_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    156,132,11,14
+    PUSHBUTTON      "+",IDC_NET_ADD,170,132,19,14
+    PUSHBUTTON      "-",IDC_NET_DEL,191,132,18,14
+    LISTBOX         IDC_NET_LAYERS,8,150,193,54,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_NET_LAYERS_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    204,168,11,18
+    GROUPBOX        "Wyjœcia:",IDC_STATIC,228,120,126,91
+    LISTBOX         IDC_NET_CATEGORIES,234,132,114,54,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NET_CATEGORY,234,190,114,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDC_NET_OK,246,216,50,14
+    PUSHBUTTON      "Anuluj",IDC_NET_CANCEL,300,216,50,14
+END
+
+IDD_ABOUTDLG DIALOGEX 0, 0, 235, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "O programie..."
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,17,18,21,20
+    LTEXT           "NeuralNet Wersja 1.0",IDC_STATIC,54,18,70,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,54,26,63,8
+    DEFPUSHBUTTON   "OK",IDOK,93,112,50,16,WS_GROUP
+    LTEXT           "Projekt zaliczeniowy z ""Programowanie komputerów""",
+                    IDC_STATIC,54,43,168,8
+    LTEXT           "Wykonali:\nMiros³aw Szajner\n£ukasz Wojsa",IDC_STATIC,
+                    54,60,56,25
+    LTEXT           "Rok studiów:\n2FD 2004/2005",IDC_STATIC,54,89,50,17
+    CONTROL         139,IDC_STATIC,"Static",SS_BITMAP,7,55,39,66
+END
+
+IDD_TRAININGDLG DIALOGEX 0, 0, 294, 212
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Bezw³adnoœæ (alfa):",IDC_STATIC,0,0,144,60
+    CONTROL         "Sta³a",IDC_CONST_ALFA,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,6,12,33,10
+    CONTROL         "Zmieniaj liniowo do wartoœci:",IDC_CHANGE_ALFA,"Button",
+                    BS_AUTORADIOBUTTON,6,24,107,10
+    EDITTEXT        IDC_END_ALFA,18,36,108,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Szybkoœæ uczenia (eta):",IDC_STATIC,150,0,144,60
+    CONTROL         "Sta³a",IDC_CONST_ETA,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,156,12,33,10
+    CONTROL         "Zmieniaj liniowo do wartoœci:",IDC_CHANGE_ETA,"Button",
+                    BS_AUTORADIOBUTTON,156,24,107,10
+    EDITTEXT        IDC_END_ETA,168,36,108,14,ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Rozmiar obrazka:",IDC_STATIC,0,60,294,48
+    LTEXT           "Szerokoœæ:",IDC_STATIC,6,72,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_WIDTH,42,72,84,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_WIDTH_SPIN,"msctls_updown32",UDS_ARROWKEYS,126,72,
+                    11,14
+    LTEXT           "Wysokoœæ:",IDC_STATIC,156,72,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HEIGHT,192,72,84,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_HEIGHT_SPIN,"msctls_updown32",UDS_ARROWKEYS,276,
+                    72,11,14
+    LTEXT           "Static",IDC_INFO,6,90,282,12,SS_CENTERIMAGE
+    GROUPBOX        "Ustawienia nauki:",IDC_STATIC,0,108,294,84
+    LTEXT           "Liczba epok:",IDC_STATIC,6,120,42,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EPOCHS,54,120,60,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_EPOCHS_SPIN,"msctls_updown32",UDS_ARROWKEYS,114,
+                    120,11,14
+    CONTROL         "Przerwij, gdy b³¹d epoki jest mniejszy ni¿",
+                    IDC_BREAKERMS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,
+                    138,144,12
+    EDITTEXT        IDC_MAXERMS,198,138,90,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Zmieñ wzmocnienie funkcji (beta):",IDC_CHANGE_BETA,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,156,120,12
+    EDITTEXT        IDC_BETA,174,156,114,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "Zmieñ funkcjê aktywacji:",IDC_CHANGE_FUNCTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,174,90,12
+    COMBOBOX        IDC_FUNCTION,126,174,162,54,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,186,198,50,14
+    PUSHBUTTON      "Anuluj",IDCANCEL,240,198,50,14
+    PUSHBUTTON      "Wektory ucz¹ce",IDC_VECTORS_LIST,6,198,84,14
+    LTEXT           "Liczba powtórzeñ wektora:",IDC_STATIC,138,120,87,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_REPEATS,232,120,44,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,276,120,11,
+                    14
+    PUSHBUTTON      "Losuj wagi",IDC_BUTTON1,96,198,60,14
+END
+
+IDD_VECTORSDLG DIALOGEX 0, 0, 402, 188
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Wyjœcia:",IDC_STATIC,6,6,132,156
+    LISTBOX         IDC_OUTPUTS_LIST,12,18,119,120,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_OUTPUT_NAME,12,140,119,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Wyczyœæ naukê",IDC_CLEAR_TRAINING,6,168,60,14
+    PUSHBUTTON      "Ustawienia nauki",IDC_TRAINING_SETTINGS,72,168,66,14
+    GROUPBOX        "Wektory:",IDC_STATIC,144,6,138,174
+    LISTBOX         IDC_VECTORS_LIST,150,18,126,138,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_VECTOR_NAME,150,159,70,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Wytnij",IDC_CUT,222,159,26,14,BS_FLAT
+    PUSHBUTTON      "Wklej",IDC_PASTE,249,159,27,14,BS_FLAT
+    CONTROL         "",IDC_IMAGE,"Static",SS_OWNERDRAW,294,18,96,90
+    CONTROL         "Wektor testuj¹cy",IDC_VECTOR_TESTING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,288,120,68,10
+    PUSHBUTTON      "Dodaj plik",IDC_ADD_FILE,288,132,48,14
+    PUSHBUTTON      "Dodaj folder",IDC_ADD_FOLDER,342,132,54,14
+    PUSHBUTTON      "Usuñ wektor (y)",IDC_DELETE_FILE,288,150,108,14
+    PUSHBUTTON      "OK",IDOK,288,168,108,14
+    GROUPBOX        "Podgl¹d:",IDC_STATIC,288,6,108,108
+END
+
+IDD_INFODLG DIALOGEX 0, 0, 152, 298
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Iloœæ wejœæ:",IDC_STATIC,6,24,38,8
+    CTEXT           "Informacje o sieci",IDC_STATIC,0,6,150,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,18,151,1
+    RTEXT           "Static",IDC_INFO_INPUTS,6,36,138,8
+    LTEXT           "Iloœæ wyjœæ:",IDC_STATIC,6,54,38,8
+    RTEXT           "Static",IDC_INFO_OUTPUTS,6,66,138,8
+    LTEXT           "Iloœæ warstw:",IDC_STATIC,6,84,44,8
+    RTEXT           "Static",IDC_INFO_LAYERS,6,96,138,8
+    LTEXT           "Funkcja aktywacji:",IDC_STATIC,6,174,60,8
+    LTEXT           "Bezw³adnoœæ (alfa):",IDC_STATIC,6,204,64,8
+    RTEXT           "Static",IDC_INFO_BETA,6,246,138,8
+    LTEXT           "Wzmocnienie (beta):",IDC_STATIC,6,234,66,8
+    LTEXT           "Szybkoœæ uczenia (eta):",IDC_STATIC,6,264,76,8
+    RTEXT           "Static",IDC_INFO_FUNCTION,6,186,138,8
+    LTEXT           "Iloœæ wszystkich neuronów:",IDC_STATIC,6,114,88,8
+    RTEXT           "Static",IDC_INFO_NEURONS,6,126,138,8
+    EDITTEXT        IDC_INFO_ALFA,6,216,138,14,ES_RIGHT | NOT WS_BORDER
+    EDITTEXT        IDC_INFO_ETA,6,276,138,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER
+    LTEXT           "Rozmiar obrazka:",IDC_STATIC,6,144,56,8
+    RTEXT           "Static",IDC_INFO_WIDTH,8,156,60,8
+    LTEXT           "x",IDC_STATIC,71,156,8,8
+    LTEXT           "Static",IDC_INFO_HEIGHT,78,156,66,8
+END
+
+IDD_IMPORTDLG DIALOGEX 0, 0, 332, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Importuj plik..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_IMPORT_IMAGE,"Static",SS_OWNERDRAW,7,7,90,90
+    CONTROL         "",IDC_IMPORT_FILENAME,"Static",SS_SIMPLE | SS_SUNKEN | 
+                    SS_PATHELLIPSIS | WS_GROUP,103,7,222,12
+    GROUPBOX        "Ustawienia importu:",IDC_STATIC,103,25,222,72
+    CONTROL         "Obraz w odcieniach szaroœci",IDC_IMPORT_GRAYED,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,114,36,102,12
+    CONTROL         "Obraz monochromatyczny",IDC_IMPORT_MONOCHROME,"Button",
+                    BS_AUTORADIOBUTTON,114,48,96,12
+    LTEXT           "Aktywny kolor:",IDC_STATIC,114,78,48,12,SS_CENTERIMAGE
+    CONTROL         "Bia³y",IDC_IMPORT_WHITE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,168,78,36,12
+    CONTROL         "Czarny",IDC_IMPORT_BLACK,"Button",BS_AUTORADIOBUTTON,
+                    210,78,36,12
+    LTEXT           "Próg aktywnego koloru:",IDC_STATIC,126,60,84,12,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_IMPORT_BIAS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,210,62,100,12
+    LTEXT           "Oczekiwane aktywne wyjœcie:",IDC_STATIC,19,103,95,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_IMPORT_OUTPUT,120,102,192,48,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Wektor testuj¹cy",IDC_IMPORT_TESTING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,239,120,72,10,WS_EX_RIGHT
+    PUSHBUTTON      "Zastosuj do wszystkich",IDC_IMPORT_ALL,7,138,92,14
+    DEFPUSHBUTTON   "OK",IDC_IMPORT_OK,221,138,50,14
+    PUSHBUTTON      "Anuluj",IDC_IMPORT_CANCEL,275,138,50,14
+    LTEXT           "Nazwa wektora:",IDC_STATIC,18,120,60,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_IMPORT_NAME,78,120,132,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Pomiñ",IDC_IMPORT_SKIP,102,138,50,14
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 156, 30
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_TEACHDLG DIALOGEX 0, 0, 264, 216
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ucz sieæ",IDC_TEACH_OK,148,196,50,14
+    PUSHBUTTON      "Zamknij",IDC_TEACH_CANCEL,202,196,50,14
+    CONTROL         "",IDC_TEACH_PROGRESS,"msctls_progress32",WS_BORDER | 
+                    0x1,12,175,240,14
+    LTEXT           "Alfa:",IDC_STATIC,11,11,16,8
+    LTEXT           "Eta:",IDC_STATIC,83,11,14,8
+    LTEXT           "Max. b³¹d epoki:",IDC_STATIC,155,11,54,8
+    LTEXT           "",IDC_TEACH_ALFA,29,11,42,8
+    LTEXT           "",IDC_TEACH_ETA,101,11,42,8
+    LTEXT           "",IDC_TEACH_MAXERMS,215,11,36,8
+    CTEXT           "",IDC_TEACH_STATUS,18,162,228,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,0,0,264,216
+    LISTBOX         IDC_TEACH_LOGGER,11,23,240,79,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TEACH_EPOCH_PROGRESS,"msctls_progress32",
+                    WS_BORDER | 0x1,12,144,240,14
+    CTEXT           "",IDC_TEACH_EPOCH_STATUS,18,132,228,8,SS_CENTERIMAGE
+    LTEXT           "Czas nauki:",IDC_STATIC,12,120,38,8
+    LTEXT           "B³¹d epoki:",IDC_STATIC,138,120,36,8
+    LTEXT           "",IDC_TEACH_TIME,54,120,72,8
+    LTEXT           "",IDC_TEACH_ERMS,180,120,72,8
+    CONTROL         "Wyœwietlaj wszystkie informacje",IDC_TEACH_SHOWALL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,102,114,10
+    PUSHBUTTON      "Poka¿ log",IDC_TEACH_SHOWLOG,66,196,50,14,WS_DISABLED
+    PUSHBUTTON      "Losuj wagi",IDC_TEACH_RANDOM,12,196,50,14
+END
+
+IDD_RECOGNIZEDLG DIALOGEX 0, 0, 344, 164
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Podgl¹d:",IDC_STATIC,6,66,84,90
+    CONTROL         "",IDC_RECOGNIZE_IMAGE,"Static",SS_OWNERDRAW,12,78,72,72
+    LISTBOX         IDC_RECOGNIZE_OUTPUTS,222,78,108,72,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Wektor wejœciowy:",IDC_STATIC,6,6,330,36
+    GROUPBOX        "Wyjœcia sieci:",IDC_STATIC,216,66,120,90
+    EDITTEXT        IDC_RECOGNIZE_FILENAME,18,18,252,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Przegl¹daj",IDC_RECOGNIZE_BROWSE,276,18,50,14
+    LTEXT           "Static",IDC_RECOGNIZE_TEXT,6,48,330,12,SS_CENTERIMAGE
+    CONTROL         "Obraz w odcieniach szaroœci",IDC_RECOGNIZE_MONOCHROME,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,96,66,103,11
+    CONTROL         "Obraz monochromatyczny",IDC_RECOGNIZE_GRAYED,"Button",
+                    BS_AUTORADIOBUTTON,96,78,96,10
+    CONTROL         "",IDC_RECOGNIZE_BIAS,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,108,90,102,12
+    LTEXT           "Aktywny kolor:",IDC_STATIC,96,102,49,8
+    CONTROL         "Bia³y",IDC_RECOGNIZE_WHITE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,108,114,31,10
+    CONTROL         "Czarny",IDC_RECOGNIZE_BLACK,"Button",BS_AUTORADIOBUTTON,
+                    156,114,39,10
+    PUSHBUTTON      "Rozpoznaj",IDC_RECOGNIZE,96,138,50,14
+    DEFPUSHBUTTON   "Zamknij",IDC_RECOGNIZE_CLOSE,156,138,50,14
+END
+
+IDD_TESTINGDLG DIALOGEX 0, 0, 386, 176
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Zamknij",IDOK,318,126,50,14
+    LISTBOX         IDC_LIST1,6,12,72,150,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_LIST2,96,12,96,150,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Podgl¹d:",IDC_STATIC,204,102,66,66
+    CONTROL         "",IDC_IMAGE,"Static",SS_OWNERDRAW,210,114,54,48
+    LISTBOX         IDC_LIST3,210,12,162,78,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Wektory testuj¹ce:",IDC_STATIC,0,0,84,168
+    GROUPBOX        "Rozpoznane symbole:",IDC_STATIC,90,0,108,168
+    GROUPBOX        "Wyjœcia sieci:",IDC_STATIC,204,0,174,96
+    PUSHBUTTON      "Testuj",IDC_TEST,318,108,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_NETDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 347
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_ABOUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_TRAININGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_VECTORSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 395
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_INFODLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 296
+    END
+
+    IDD_IMPORTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDR_MAINFRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 23
+    END
+
+    IDD_TEACHDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_RECOGNIZEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_TESTINGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\icon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\toolbar.bmp"
+IDB_LOGO                BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_NET_NEW
+    BUTTON      ID_NET_OPEN
+    BUTTON      ID_NET_SAVE
+    SEPARATOR
+    BUTTON      ID_TRAINING_NEW
+    BUTTON      ID_TRAINING_OPEN
+    BUTTON      ID_TRAINING_SAVE
+    SEPARATOR
+    BUTTON      ID_VECTORS_FILE
+    BUTTON      ID_VECTORS_FOLDER
+    BUTTON      ID_VECTORS_LIST
+    SEPARATOR
+    BUTTON      ID_TRAINING_TEACH
+    BUTTON      ID_TESTING_TESTING
+    SEPARATOR
+    BUTTON      ID_RECOGNIZE_RECOGNIZE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Sieæ"
+    BEGIN
+        MENUITEM "&Nowa...\tCtrl+N",            ID_NET_NEW
+        MENUITEM "&Edytuj...\tCtrl+E",          ID_NET_EDIT
+        MENUITEM "&Otwórz...\tCtrl+O",          ID_NET_OPEN
+        MENUITEM "Zapi&sz\tCtrl+S",             ID_NET_SAVE
+        MENUITEM "&Zapisz jako...",             ID_NET_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Za&koñcz\tAlt+F4",            ID_APP_EXIT
+    END
+    POPUP "&Nauka"
+    BEGIN
+        MENUITEM "&Nowa...",                    ID_TRAINING_NEW
+        MENUITEM "&Edytuj...",                  ID_TRAINING_EDIT
+        MENUITEM "&Otwórz...",                  ID_TRAINING_OPEN
+        MENUITEM "Zapi&sz",                     ID_TRAINING_SAVE
+        MENUITEM "&Zapisz jako...",             ID_TRAINING_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "&Wektory ucz¹ce"
+        BEGIN
+            MENUITEM "Importuj &wektor...",         ID_VECTORS_FILE
+            MENUITEM "Importuj &wektory..",         ID_VECTORS_FOLDER
+            MENUITEM SEPARATOR
+            MENUITEM "&Wyœwietl spis",              ID_VECTORS_LIST
+        END
+        MENUITEM "&Ucz sieæ",                   ID_TRAINING_TEACH
+    END
+    POPUP "&Testowanie"
+    BEGIN
+        MENUITEM "&Testuj",                     ID_TESTING_TESTING
+    END
+    POPUP "&Rozpoznawanie"
+    BEGIN
+        MENUITEM "&Rozpoznawaj",                ID_RECOGNIZE_RECOGNIZE
+    END
+    POPUP "&Widok"
+    BEGIN
+        MENUITEM "Pasek &narzêdzi",             ID_VIEW_TOOLBAR
+        MENUITEM "Pasek &stanu",                ID_VIEW_STATUS_BAR
+    END
+    POPUP "P&omoc"
+    BEGIN
+        MENUITEM "&O programie...",             ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F4,          ID_APP_EXIT,            VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    "N",            ID_NET_NEW,             VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_NET_OPEN,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_NET_SAVE,            VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041504e4"
+        BEGIN
+            VALUE "CompanyName", "Miros³aw Szajner i £ukasz Wojsa"
+            VALUE "FileDescription", "Rozpoznawanie cyfr przy pomocy sieci neuronowych"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "NeuralNet.exe"
+            VALUE "LegalCopyright", "(c) Miros³aw Szajner & £ukasz Wojsa. Wszelkie prawa zastrze¿one."
+            VALUE "OriginalFilename", "NeuralNet.exe"
+            VALUE "ProductName", "NeuralNet"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x415, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Neural Net 1.0"
+    IDS_NET_LAYER           "Warstwa z %u neuronami"
+    IDS_NET_PROMPT_EDIT     "Zmiana tych ustawieñ wymaga ponownej nauki sieci.\nCzy chcesz kontynuowaæ?"
+    IDS_NETFILTER           "Plik sieci (.ann)|*.ann|Wszystkie pliki (*.*)|*.*||"
+    IDS_ERROR_NET_HEADER    "To nie jest poprawny plik sieci!"
+    IDS_ERROR_OPEN          "Wyst¹pi³ b³¹d podczas otwierania pliku!"
+    IDS_ERROR_SAVE          "Wyst¹pi³ b³¹d podczas tworzenia pliku!"
+    IDS_NETDEFEXT           ".ann"
+    IDS_NET_ERROR_IMAGE_SIZE "Rozmiar obrazka nie pasuje do sieci!"
+    IDS_PROMPT_NET_SAVE     "Czy chcesz zapisaæ zmiany w istniej¹cej sieci?"
+    IDS_TRNFILTER           "Plik nauki (*.trn)|*.trn|Wszystkie pliki (*.*)|*.*||"
+    IDS_TRNDEFEXT           ".trn"
+    IDS_INFO_SIZE           "Podany rozmiar obrazka ró¿ni siê od rozmiaru obrazka aktualnej sieci!"
+    IDS_PROMPT_TRAINING_SAVE "Czy chcesz zapisaæ zmiany w nauce?"
+    IDS_INFO_ZERO           "Jeden z wymiarów obrazka jest równy zero!"
+    IDS_INFO_NETZERO        "Jeden z wymiarów obrazka sieci jest równy zero! Popraw to w ustawieniach sieci!"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Neural Net 1.0"
+    AFX_IDS_IDLEMESSAGE     "Wciœnij F1, aby uzyskaæ pomoc"
+    AFX_IDS_HELPMODEMESSAGE "Wybierz element do którego chcesz uzyskaæ pomoc"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Wyœwietla informacje o programie\nO programie..."
+    ID_APP_EXIT             "Wychodzi z aplikacji; pyta czy zapisaæ zmiany\nZakoñcz"
+    ID_HELP_INDEX           "Otwiera pomoc\nSpis treœci pomocy"
+    ID_HELP_FINDER          "Wyœwietla spis treœci pomocy\nSpis treœci pomocy"
+    ID_HELP_USING           "Wyœwietla informacje jak u¿ywaæ pomocy\nPomoc"
+    ID_CONTEXT_HELP         "Wyœwietla pomoc o wybranym oknie\nPomoc"
+    ID_HELP                 "Wyœwietla informacje o aktualnym zadaniu lub poleceniu\nPomoc"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Prze³¹cza na nastêpne okno\nNastêpne okno"
+    ID_PREV_PANE            "Prze³¹cza na poprzednie okno\nPoprzednie okno"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Pokazuje lub ukrywa pasek narzêdzi\nPoka¿/ukryj pasek narzêdzi"
+    ID_VIEW_STATUS_BAR      "Pokazuje lub ukrywa pasek stanu\nPoka¿/ukryj pasek stanu"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Zmienia rozmiar okna"
+    AFX_IDS_SCMOVE          "Zmienia pozycjê okna"
+    AFX_IDS_SCMINIMIZE      "Zmniejsz okno do ikony"
+    AFX_IDS_SCMAXIMIZE      "Powiêksz okno na pe³ny ekran"
+    AFX_IDS_SCNEXTWINDOW    "Prze³¹cz do nastêpnego dokumentu"
+    AFX_IDS_SCPREVWINDOW    "Prze³¹cz do poprzedniego dokumentu"
+    AFX_IDS_SCCLOSE         "Zamknij aktywne okno i zapytaj o zapisanie zmian"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Przywróæ okno do normalnego rozmiaru"
+    IDS_FORMAT_EPOCH        "epoce"
+    IDS_FORMAT_EPOCHS       "epokach"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TRAINING_SAVE        "Zapisuje ustawienia nauki do pliku\nZapisz naukê"
+    ID_TRAINING_OPEN        "£aduje ustawienia nauki z pliku\nZa³aduj naukê"
+    ID_TRAINING_NEW         "Wyœwietla kreatora nauki\nNowa nauka"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TRAINING_EDIT        "Edytuje ustawienia nauki\nEdytuj naukê"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NET_NEW              "Wyœwietla kreatora nowej sieci neuronowej\nNowa sieæ"
+    ID_NET_OPEN             "Odczytuje sieæ neuronow¹ z pliku\nOdczytaj sieæ"
+    ID_NET_SAVE             "Zapisuje sieæ neuronow¹ do pliku\nZapisz sieæ"
+    ID_NET_SAVE_AS          "Zapisuje sieæ neuronow¹ do nowego pliku\nZapisz sieæ do nowego pliku"
+    ID_NET_EDIT             "Wyœwietla okno edycji ustawieñ sieci\nEdytuj sieæ"
+    ID_TRAINING_SAVE_AS     "Zapisuje ustawienia nauki do nowego pliku"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VECTORS_FOLDER       "Importuj wektory z folderu\nImportuj wektory..."
+    ID_VECTORS_FILE         "Importuj wektor z pliku\nImportuj wektor"
+    ID_VECTORS_LIST         "Wyœwietl listê wektorów ucz¹cych\nWyœwietl listê wektorów"
+    ID_RECOGNIZE_RECOGNIZE  "Wyœwietla okno do rozpoznawania cyfr z obrazków\nRozpoznaj cyfry"
+    ID_TESTING_TESTING      "Wyœwietla okno testowania sieci\nTestuj sieæ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_IMPORT_FILTER       "Pliki obrazków|*.bmp;*.gif;*.jpg;*.jpeg|Pliki tekstowe|*.txt||"
+    IDS_IMPORT_NO_OUTPUTS   "Brak wyjœæ sieci. Utwórz lub za³aduj sieæ!"
+    IDS_IMPORT_NO_SELECTED_OUTPUT "Wybierz oczekiwane wyjœcie!"
+    IDS_ALL_VECTORS         "Wszystkie wektory"
+    IDS_DELETE_VECTORS      "Czy chcesz usun¹æ %d wektory (-ów)?"
+    IDS_DELETE_VECTOR       "Czy chcesz usun¹æ wektor %s?"
+    IDS_CLEAR_TRAINING      "Czy napewno chcesz usun¹æ wszystkie wektory?"
+    IDS_START_TRAINING      "Ucz sieæ"
+    IDS_STOP_TRAINING       "Zatrzymaj"
+    IDS_TEACH_VECTOR        "Wektor %d z %d"
+    IDS_LOG_TRAININGFILE    "# Plik nauki: %s"
+    IDS_TEACH_START         "Rozpoczêto naukê..."
+    IDS_TEACH_VECTORS       "Nauka %d wektorów..."
+    IDS_TEACH_STOP          "Zakoñczono naukê..."
+    IDS_TEACH_VECTOR_NAME   "Nauka wektora %s"
+    IDS_TEACH_EPOCH_NUMBER  "Epoka nr %d"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TRAINING_TEACH       "Wyœwietla okno nauki sieci\nUcz sieæ"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_ACTIVATE_VERB   "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TEACH_ERMS          "B³¹d epoki %d wynosi %.4f"
+    IDS_LOG_NETFILE         "# Plik sieci: %s"
+    IDS_LOG_NETTYPE         "# Sieæ perceptronowa"
+    IDS_LOG_NETINPUTS       "# Liczba wejœæ: %d"
+    IDS_LOG_NETOUTPUTS      "# Liczba wyjœæ: %d"
+    IDS_LOG_NETLAYERS       "# Liczba warstw: %d"
+    IDS_LOG_TRAININGALGORITHM "# Algorytm uczenia: wsteczna propagacja b³êdu"
+    IDS_LOG_TRAININGERROR   "# Funkcja b³êdu: suma kwadratów"
+    IDS_LOG_LAYERNEURONS    "# Liczba neuronów w warstwie %d: %d"
+    IDS_LOG_NETFUNCTION     "# Funkcja aktywacji %s o wzmocnieniu %.2f"
+    IDS_LOG_CHANGEETA       "# Zmieniaj szybkoœæ uczenia (eta) od wartoœci %.4f do wartoœci %.4f"
+    IDS_LOG_CONSTETA        "# Sta³a szybkoœæ uczenia (eta) o wartoœci %.4f"
+    IDS_LOG_CHANGEALFA      "# Zmieniaj bezw³adnoœæ (alfa) od wartoœci %.4f do wartoœci %.4f"
+    IDS_LOG_CONSTALFA       "# Sta³a bezw³adnoœæ (alfa) o wartoœci %.4f"
+    IDS_LOG_EPOCHS          "# Liczba epok: %d"
+    IDS_LOG_REPEATS         "# Liczba powtórzeñ nauki ka¿dego wektora: %d"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOG_WIDTH           "# Szerokoœæ obrazka: %d pikseli"
+    IDS_LOG_HEIGHT          "# Wysokoœæ obrazka: %d pikseli"
+    IDS_LOG_MAXERMS         "# Przerwij naukê gdy b³¹d epoki jest mniejszy ni¿ %.4f"
+    IDS_TEACH_ONERMS        "Sieæ dosz³a do za³o¿onego max. b³êdu %.4f po %d %s"
+    IDS_TEACH_EPOCH         "Epoka %d z %d"
+    IDS_NET_OUTPUT          "Wyjœcie %d"
+    IDS_RECOGNIZE_TEXT      "Sieæ rozpozna³a obraz jako %s"
+    IDS_RECOGNIZE_OUTPUT    "%s: %.4f"
+    IDS_NET_NOT_CREATED     "Sieæ nie zosta³a jeszcze stworzona lub za³adowana!\nAby uruchomiæ wybran¹ funkcjê nale¿y najpierw stworzyæ lub za³adowaæ sieæ.\nW tym celu wybierz:\nSieæ|Nowa... lub Sieæ|Otwórz..."
+    IDS_TRAINING_NOT_CREATED 
+                            "Nauka nie zosta³a jeszcze stworzona lub za³adowana!\nAby uruchomiæ wybran¹ funkcjê nale¿y najpierw stworzyæ lub za³adowaæ naukê.\nW tym celu wybierz:\nNauka|Nowa... lub Nauka|Otwórz..."
+    IDS_TRN_MUST_SAVE       "Ta opcja wymaga zapisania nauki.\nCzy chcesz kontynuowaæ?"
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NeuralNet.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
